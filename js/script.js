@@ -43,11 +43,11 @@ function calculateOrderCost() {
     costOfSize = LARGE_PRICE
   }
 
-  if (typeOfChocolate === "milk-chocolate") {
+  if (typeOfChocolate === "milk") {
     costOfChocolate = MILK_CHOCOLATE_PRICE
-  } else if (typeOfChocolate === "white-chocolate") {
+  } else if (typeOfChocolate === "white") {
     costOfChocolate = WHITE_CHOCOLATE_PRICE
-  } else if (typeOfChocolate === "dark-chocolate") {
+  } else if (typeOfChocolate === "dark") {
     costOfChocolate = DARK_CHOCOLATE_PRICE
   } else {
     costOfChocolate = RUBY_CHOCOLATE_PRICE
@@ -57,5 +57,5 @@ function calculateOrderCost() {
   const subtotalCost = costOfSize + costOfChocolate + costOfToppings
   const amountTaxed = subtotalCost * TAX_RATE
   const totalCost = subtotalCost + amountTaxed
-  document.getElementById("result").innerHTML = "Total: $" + totalCost.toFixed(2) + "</br>" + "Tax: $" + amountTaxed.toFixed(2) + "</br>" + "Subtotal: $" + subtotalCost.toFixed(2)
+  document.getElementById("result").innerHTML = "A " + sizeOfDrink + " " + typeOfChocolate + " hot chocolate with " + numberOfToppings + " toppings. </br>" + "Total: $" + totalCost.toFixed(2) + "</br>" + "Tax: $" + amountTaxed.toFixed(2) + "</br>" + "Subtotal: $" + subtotalCost.toFixed(2)
 }
